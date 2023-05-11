@@ -1,0 +1,184 @@
+.content{
+  display: inline-table;
+  
+}
+.card{
+    
+    background-image: url('/public/target.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+
+    display:inline-block;
+    height:fit-content;
+    width: 350px ;
+    margin: 10px;
+    border: 7px solid black; 
+    border-radius: 20px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+
+
+.card button{
+    background-color: rgb(255, 0, 0);
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    font-family:inherit ;
+    border: 5px solid rgb(209, 209, 209);
+
+    -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+
+  
+  
+font-family: Arial;
+  color: #ffffff;
+  font-size: 27px;
+  padding: 19px;
+  text-decoration: none;
+}
+
+
+.card button:hover {
+    background: #2079b0;
+    background-image: -webkit-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: -moz-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: -ms-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: -o-linear-gradient(top, #2079b0, #eb94d0);
+    background-image: linear-gradient(to bottom, #2079b0, #eb94d0);
+    text-decoration: none;
+}
+
+.card img{
+    border: 4px solid rgb(0, 87, 0);
+    margin: 10px;
+    border-radius: 5%  ;
+}
+
+.nav{
+  background: linear-gradient(to right, green, black);
+  display: flex;
+  width: 100%;
+background-color: #06c77d;
+justify-content: end;
+}
+.nav button{
+  background-color: black;
+  color: #ffffff;
+  border-radius: 15%;
+}
+
+.about{
+  display: flex;
+  background-color: #2079b0;
+  color: aliceblue;
+
+}
+.bar{
+  display: flex;
+  background-color: #2079b0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.detail{
+  display: inline;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail div{
+  background-color: #09791564;
+  display:block;
+  align-items: center;
+  justify-content: end;
+}
+.detail div h2{
+  display: flex;
+  justify-content: center;
+}
+
+.detail img{
+  height: 500px;
+  display: block;
+  text-align: center;
+  margin: auto;
+  
+ border: 5px solid black;
+}
+
+.forms{
+  margin: 0%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.563);
+  width: 450px;;
+  height: 400px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin: 10% auto  ;
+}
+
+.forms p{
+  color: red;
+  
+}
+
+.favorites{
+  color: white;
+  background-color: #ff009d3a;
+  font-family: 'Arial', sans-serif;
+}
+.favorites p{
+  display: inline;
+  font-size: 20px;
+  margin: 20px;
+}
+
+.card #fav{
+  position:relative;
+  left: 69%;
+}
+.favorites #fav{
+  display: none; /* elimina el boton x en la seccion favoritos */
+} 
+
+.favorites select{
+  
+ font-size: 16px;
+ font-family: 'Arial', sans-serif;
+ font-weight: 400;
+ color: #444;
+ line-height: 1.3;
+ padding: .4em 1.4em .3em .8em;
+ width: 200px;
+ max-width: 100%; 
+ box-sizing: border-box;
+ margin: 0;
+ border: 1px solid #aaa;
+ box-shadow: 0 1px 0 1px rgba(0,0,0,.03);
+ border-radius: .3em;
+ -moz-appearance: none;
+ -webkit-appearance: none;
+ appearance: none;
+ background-color: #fff;
+ background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E'),
+   linear-gradient(to bottom, #ffffff 0%,#f7f7f7 100%);
+ background-repeat: no-repeat, repeat;
+ background-position: right .7em top 50%, 0 0;
+ background-size: .65em auto, 100%;
+}
+
+.di{
+  
+  height: 10px;
+}
