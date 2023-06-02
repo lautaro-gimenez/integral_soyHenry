@@ -7,18 +7,11 @@ let initialState ={
 export const reducer =(state = initialState, action)=>{
     console.log( state)
     switch (action.type) {
-        case "ADD_FAV": return{
-            ...state,
-            myFavorites:[ ...state.myFavorites, action.payload],
-            allCharacters:[...state.myFavorites, action.payload]
-        }
+        case 'ADD_FAV':
+      return { ...state, myFavorites: action.payload, allCharacters: action.payload };
         
-        case "REMOVE_FAV": return{
-            ...state,
-            myFavorites: state.myFavorites.filter(function(obj){ 
-                return obj.id!= action.payload
-            }) 
-        }
+      case 'REMOVE_FAV':
+        return { ...state, myFavorites: action.payload };
         case "FILTER": 
             console.log(state.allCharacters[0].gender)  
             

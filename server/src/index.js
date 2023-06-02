@@ -2,7 +2,8 @@ const express = require('express')
 const server = express()
 const PORT = 3001
 const router= require('../src/routes/index')
-const myfavorites =require('./controllers/handleFavorites')
+
+const { conn } = require('./DB_connection');
 
 server.use(express.json())
 // server.use('/',(req,res,next)=>{
@@ -30,4 +31,10 @@ server.use('/rickandmorty',router)
 
 server.listen(PORT, ()=> {
     console.log('server raised in port: ' + PORT)
+    conn.sync({force:false})
+    .then(()=>{
+        console.log('base de datos sincronizada')
+    }).catch((error)=>{
+        console.log('error en la base de datos '+ error)
+    })
 });

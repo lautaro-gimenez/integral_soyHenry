@@ -6,6 +6,7 @@ import { orderCards,filterCards } from "../redux/actions"
 import { useState } from "react"
 
   const Favorites=(props) =>{
+    
     const [aux, setAux]=useState(false)
     
     const dispatch =useDispatch()

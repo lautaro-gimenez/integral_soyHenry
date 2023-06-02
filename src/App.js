@@ -19,15 +19,16 @@ import style from './components/estilos.module.css'
 function App() {
     let [characters, setCharacters] = useState([])
 
-    function onSearch(id) {
-      axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-         if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
-         } else {
-            window.alert('¡No hay personajes con este ID!');
-         }
-      });
-      }
+   async function onSearch(id) {
+       try{let char = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+       
+         
+            setCharacters((oldChars) => [...oldChars, char.data]);
+         
+      }catch(error){window.alert('¡No hay personajes con este ID!')}
+   }
+      
+      
       
       const onClose =(ID)=>{
       let noEliminados=[]
@@ -45,18 +46,24 @@ function App() {
         }
         
       }
-      const navigate = useNavigate()
-      const [access, setAccess] = useState(false)
-      let EMAIL = 'lautarogimenezr@gmail.com'
-      let PASSWORD = '1234567'
-      const login =(userData)=>{
-         if (userData.password === PASSWORD && userData.email === EMAIL) {
-            setAccess(true);
-            navigate('/home');
-         }else{
-            alert('usuario y/o contraseña invalidos')
-         }
-      }
+   const navigate = useNavigate()
+   const [access, setAccess] = useState(false)
+   let email = 'lautarogimenezr@gmail.com'
+   let password = '1234567'
+
+
+    async function login(userData) {
+      const { email, password } = userData;
+      
+      const URL = 'http://localhost:3001/rickandmorty/login/';
+      try{let log = await axios(`http://localhost:3001/rickandmorty/login/?email=${email}&password=${password}`)
+
+         const  access  = log.data; 
+         setAccess(log.data);
+         access && navigate('/home');
+      }catch(error){window.alert(error)}
+      
+   }
 
       useEffect(() => {
          !access && navigate('/');
